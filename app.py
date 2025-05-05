@@ -9,12 +9,10 @@ def home():
         'futuros': 750,
         'margem': 500
     }
-
     posicoes = [
         {'par': 'BTC/USDT', 'lado': 'LONG', 'quantidade': 0.01, 'pnl': '+5%'},
         {'par': 'ETH/USDT', 'lado': 'SHORT', 'quantidade': 0.5, 'pnl': '-2%'}
     ]
-
     logs = [
         'Análise: BTC/USDT rompeu resistência',
         'Sinal: ETH/USDT abaixo da média de 50'
@@ -42,7 +40,4 @@ def home():
     </ul>
     <em>Versão demo com dados fictícios.</em>
     '''
-
     return render_template_string(html, saldo=saldo, posicoes=posicoes, logs=logs)
-
-# 🚨 Atenção: NÃO use app.run aqui, o gunicorn cuida disso no Railway
