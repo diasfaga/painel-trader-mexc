@@ -2,6 +2,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def home():
-    return "<h1>🚀 Painel Trader MEXC está funcionando!</h1><p>Deploy via Railway ok.</p>"
+    return '✅ Aplicação Flask mínima no Railway funcionando!'
+
+if __name__ == '__main__':
+    app.run()
